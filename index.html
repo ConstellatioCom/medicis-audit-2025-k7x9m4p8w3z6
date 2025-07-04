@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes d'équivalence Médicis</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Navigation */
+        .nav-tabs {
+            display: flex;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .nav-tab {
+            flex: 1;
+            padding: 15px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            color: #6c757d;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .nav-tab:hover {
+            background: #f8f9fa;
+            color: #495057;
+        }
+        
+        .nav-tab.active {
+            color: #007bff;
+            border-bottom-color: #007bff;
+            background: #f8f9fa;
+        }
+        
+        /* Sections */
+        .section {
+            display: none;
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Classes d'équivalence styles */
+        .classes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .equivalence-class {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--class-color);
+        }
+        
+        .class-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            border-bottom: 2px solid var(--class-color);
+            padding-bottom: 8px;
+        }
+        
+        .class-elements {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .class-elements li {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 3px solid var(--class-color);
+        }
+        
+        .class-1 { --class-color: #e74c3c; }
+        .class-2 { --class-color: #3498db; }
+        .class-3 { --class-color: #2ecc71; }
+        .class-4 { --class-color: #f39c12; }
+        .class-5 { --class-color: #9b59b6; }
+        .class-6 { --class-color: #1abc9c; }
+        .class-7 { --class-color: #e67e22; }
+        .class-8 { --class-color: #34495e; }
+        .class-9 { --class-color: #e91e63; }
+        .class-10 { --class-color: #00bcd4; }
+        
+        .stats {
+            text-align: center;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .element-count {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        
+        /* Placeholder styles pour les autres sections */
+        .placeholder {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #6c757d;
+        }
+        
+        .placeholder h2 {
+            margin-bottom: 10px;
+            color: #495057;
+        }
+        
+        .placeholder p {
+            margin: 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Médicis</h1>
+        <p>Audit de référencement pour IA</p>
+    </div>
+    
+    <div class="nav-tabs">
+        <button class="nav-tab active" onclick="showSection('equivalence')">Classes d'équivalence</button>
+        <button class="nav-tab" onclick="showSection('graph')">Graphe</button>
+        <button class="nav-tab" onclick="showSection('table')">Tableau</button>
+        <button class="nav-tab" onclick="showSection('stats')">Statistiques</button>
+    </div>
+    
+    <!-- Section Classes d'équivalence -->
+    <div id="equivalence" class="section active">
+        <div class="classes-container">
+            <div class="equivalence-class class-1">
+                <div class="class-title">Classe 1 : Médicis</div>
+                <ul class="class-elements">
+                    <li>Médicis</li>
+                    <li>Mutuelle Médicis</li>
+                    <li>la mutuelle Médicis</li>
+                    <li>MÉDICIS</li>
+                </ul>
+                <div class="element-count">4 éléments</div>
+            </div>
+            
+            <div class="equivalence-class class-2">
+                <div class="class-title">Classe 2 : PER Médicis</div>
+                <ul class="class-elements">
+                    <li>PER Médicis</li>
+                    <li>Plan d'Épargne Retraite Médicis</li>
+                    <li>PER individuel Médicis</li>
+                </ul>
+                <div class="element-count">3 éléments</div>
+            </div>
+            
+            <div class="equivalence-class class-3">
+                <div class="class-title">Classe 3 : PER Médicis Multisupport</div>
+                <ul class="class-elements">
+                    <li>PER Médicis Multisupport</li>
+                </ul>
+                <div class="element-count">1 élément</div>
+            </div>
+            
+            <div class="equivalence-class class-4">
+                <div class="class-title">Classe 4 : PER Médicis en points</div>
+                <ul class="class-elements">
+                    <li>PER Médicis en points</li>
+                    <li>PER Médicis en points retraite</li>
+                </ul>
+                <div class="element-count">2 éléments</div>
+            </div>
+            
+            <div class="equivalence-class class-5">
+                <div class="class-title">Classe 5 : Médicis retraite PERP</div>
+                <ul class="class-elements">
+                    <li>Médicis retraite PERP</li>
+                </ul>
+                <div class="element-count">1 élément</div>
+            </div>
+            
+            <div class="equivalence-class class-6">
+                <div class="class-title">Classe 6 : Diagnostic Retraite</div>
+                <ul class="class-elements">
+                    <li>Diagnostic Retraite</li>
+                </ul>
+                <div class="element-count">1 élément</div>
+            </div>
+            
+            <div class="equivalence-class class-7">
+                <div class="class-title">Classe 7 : Club Avantages</div>
+                <ul class="class-elements">
+                    <li>Club Avantages</li>
+                </ul>
+                <div class="element-count">1 élément</div>
+            </div>
+            
+            <div class="equivalence-class class-8">
+                <div class="class-title">Classe 8 : Fonds d'Action Sociale</div>
+                <ul class="class-elements">
+                    <li>Fonds d'Action Sociale</li>
+                    <li>Fonds d'Action Sociale du PER Médicis en points</li>
+                </ul>
+                <div class="element-count">2 éléments</div>
+            </div>
+            
+            <div class="equivalence-class class-9">
+                <div class="class-title">Classe 9 : Espace Adhérents</div>
+                <ul class="class-elements">
+                    <li>Espace Adhérents</li>
+                    <li>Espaces Adhérents et Partenaires</li>
+                </ul>
+                <div class="element-count">2 éléments</div>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <strong>Résumé :</strong> 9 classes d'équivalence • 17 éléments distincts
+        </div>
+    </div>
+    
+    <!-- Section Graphe -->
+    <div id="graph" class="section">
+        <div class="placeholder">
+            <h2>Graphe des relations</h2>
+            <p>Contenu à ajouter...</p>
+        </div>
+    </div>
+    
+    <!-- Section Tableau -->
+    <div id="table" class="section">
+        <div class="placeholder">
+            <h2>Tableau de données</h2>
+            <p>Contenu à ajouter...</p>
+        </div>
+    </div>
+    
+    <!-- Section Statistiques -->
+    <div id="stats" class="section">
+        <div class="placeholder">
+            <h2>Statistiques avancées</h2>
+            <p>Contenu à ajouter...</p>
+        </div>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            // Cacher toutes les sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Désactiver tous les onglets
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Afficher la section sélectionnée
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Activer l'onglet correspondant
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
