@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classes d'équivalence Médicis</title>
+    <title>Entités nommées Médicis</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -72,6 +72,72 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
+        /* Table des entités nommées */
+        .entities-table {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .entities-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .entities-table th {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .entities-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: top;
+        }
+        
+        .entities-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .category-cell {
+            font-weight: 600;
+            color: #495057;
+            background: #f8f9fa !important;
+            width: 200px;
+        }
+        
+        .entity-cell {
+            font-weight: 500;
+            color: #007bff;
+            width: 250px;
+        }
+        
+        .description-cell {
+            color: #6c757d;
+            line-height: 1.5;
+        }
+        
+        /* Categories color coding */
+        .cat-medicis { border-left: 4px solid #e74c3c; }
+        .cat-organismes-publics { border-left: 4px solid #3498db; }
+        .cat-groupe-partenaires { border-left: 4px solid #2ecc71; }
+        .cat-organismes-professionnels { border-left: 4px solid #f39c12; }
+        .cat-geographie { border-left: 4px solid #9b59b6; }
+        .cat-personnes { border-left: 4px solid #1abc9c; }
+        .cat-legislation { border-left: 4px solid #e67e22; }
+        .cat-labels { border-left: 4px solid #34495e; }
+        .cat-indices { border-left: 4px solid #e91e63; }
+        .cat-medias { border-left: 4px solid #00bcd4; }
+        .cat-evenements { border-left: 4px solid #795548; }
+        
         /* Classes d'équivalence styles */
         .classes-container {
             display: grid;
@@ -120,7 +186,6 @@
         .class-7 { --class-color: #e67e22; }
         .class-8 { --class-color: #34495e; }
         .class-9 { --class-color: #e91e63; }
-        .class-10 { --class-color: #00bcd4; }
         
         .stats {
             text-align: center;
@@ -155,6 +220,8 @@
             margin: 0;
             font-style: italic;
         }
+        
+
     </style>
 </head>
 <body>
@@ -164,14 +231,268 @@
     </div>
     
     <div class="nav-tabs">
-        <button class="nav-tab active" onclick="showSection('equivalence')">Classes d'équivalence</button>
+        <button class="nav-tab active" onclick="showSection('entities')">Entités nommées</button>
+        <button class="nav-tab" onclick="showSection('equivalence')">Classes d'équivalence</button>
         <button class="nav-tab" onclick="showSection('graph')">Graphe</button>
         <button class="nav-tab" onclick="showSection('table')">Tableau</button>
         <button class="nav-tab" onclick="showSection('stats')">Statistiques</button>
     </div>
     
+    <!-- Section Entités nommées -->
+    <div id="entities" class="section active">
+        <div class="entities-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Catégorie</th>
+                        <th>Entité nommée</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Médicis et ses produits/services -->
+                    <tr class="cat-medicis">
+                        <td class="category-cell">Entité économique</td>
+                        <td class="entity-cell">Médicis</td>
+                        <td class="description-cell">Mutuelle de retraite complémentaire exclusivement dédiée aux indépendants et entrepreneurs, créée en 1978, appartenant au groupe Malakoff Humanis</td>
+                    </tr>
+                    <tr class="cat-medicis">
+                        <td class="category-cell">Produit</td>
+                        <td class="entity-cell">PER Médicis</td>
+                        <td class="description-cell">Plan d'épargne retraite individuel générique de Médicis, destiné aux indépendants et entrepreneurs</td>
+                    </tr>
+                    <tr class="cat-medicis">
+                        <td class="category-cell">Produit</td>
+                        <td class="entity-cell">PER Médicis Multisupport</td>
+                        <td class="description-cell">Plan d'épargne retraite Médicis avec gestion libre ou pilotée, investissements en fonds euros et unités de compte</td>
+                    </tr>
+                    <tr class="cat-medicis">
+                        <td class="category-cell">Produit</td>
+                        <td class="entity-cell">PER Médicis en points</td>
+                        <td class="description-cell">Plan d'épargne retraite Médicis avec gestion collective en points retraite, solution simple pour les indépendants</td>
+                    </tr>
+                    <tr class="cat-medicis">
+                        <td class="category-cell">Produit</td>
+                        <td class="entity-cell">Médicis retraite PERP</td>
+                        <td class="description-cell">Ancien produit Médicis remplacé par les PER, encore en gestion pour les adhérents existants</td>
+                    </tr>
+                    <tr class="cat-medicis">
+                        <td class="category-cell">Service</td>
+                        <td class="entity-cell">Diagnostic Retraite</td>
+                        <td class="description-cell">Service conseil de Médicis pour analyser la situation retraite des indépendants et définir leur stratégie d'épargne</td>
+                    </tr>
+                    <tr class="cat-medicis">
+                        <td class="category-cell">Service</td>
+                        <td class="entity-cell">Club Avantages</td>
+                        <td class="description-cell">Programme de fidélité Médicis offrant des réductions et offres spéciales aux adhérents</td>
+                    </tr>
+                    <tr class="cat-medicis">
+                        <td class="category-cell">Service</td>
+                        <td class="entity-cell">Fonds d'Action Sociale</td>
+                        <td class="description-cell">Dispositif d'aide financière de Médicis pour soutenir les adhérents en difficulté temporaire</td>
+                    </tr>
+                    <tr class="cat-medicis">
+                        <td class="category-cell">Service</td>
+                        <td class="entity-cell">Espace Adhérents</td>
+                        <td class="description-cell">Plateforme digitale sécurisée permettant aux adhérents Médicis de gérer leur contrat en ligne 24h/24</td>
+                    </tr>
+                    
+                    <!-- Organismes publics -->
+                    <tr class="cat-organismes-publics">
+                        <td class="category-cell">Organisme public</td>
+                        <td class="entity-cell">ACPR</td>
+                        <td class="description-cell">Autorité de Contrôle Prudentiel et de Résolution, organisme de tutelle supervisant Médicis</td>
+                    </tr>
+                    <tr class="cat-organismes-publics">
+                        <td class="category-cell">Organisme public</td>
+                        <td class="entity-cell">CNIL</td>
+                        <td class="description-cell">Commission Nationale de l'Informatique et des Libertés, autorité de référence pour la protection des données</td>
+                    </tr>
+                    <tr class="cat-organismes-publics">
+                        <td class="category-cell">Organisme public</td>
+                        <td class="entity-cell">CNAV</td>
+                        <td class="description-cell">Caisse Nationale d'Assurance Vieillesse, organisme de retraite de base du régime général</td>
+                    </tr>
+                    <tr class="cat-organismes-publics">
+                        <td class="category-cell">Organisme public</td>
+                        <td class="entity-cell">URSSAF</td>
+                        <td class="description-cell">Union de Recouvrement des cotisations de Sécurité Sociale et d'Allocations Familiales</td>
+                    </tr>
+                    <tr class="cat-organismes-publics">
+                        <td class="category-cell">Organisme public</td>
+                        <td class="entity-cell">SSI</td>
+                        <td class="description-cell">Sécurité Sociale des Indépendants, régime de protection sociale des travailleurs indépendants</td>
+                    </tr>
+                    <tr class="cat-organismes-publics">
+                        <td class="category-cell">Organisme public</td>
+                        <td class="entity-cell">CIPAV</td>
+                        <td class="description-cell">Caisse Interprofessionnelle de Prévoyance et d'Assurance Vieillesse des professions libérales</td>
+                    </tr>
+                    <tr class="cat-organismes-publics">
+                        <td class="category-cell">Organisme public</td>
+                        <td class="entity-cell">France Travail</td>
+                        <td class="description-cell">Service public de l'emploi français (ex-Pôle Emploi), gérant l'indemnisation chômage</td>
+                    </tr>
+                    <tr class="cat-organismes-publics">
+                        <td class="category-cell">Organisme public</td>
+                        <td class="entity-cell">Caisse d'Assurance Maladie</td>
+                        <td class="description-cell">Organisme de sécurité sociale gérant l'assurance maladie obligatoire</td>
+                    </tr>
+                    
+                    <!-- Groupe & Partenaires -->
+                    <tr class="cat-groupe-partenaires">
+                        <td class="category-cell">Groupe</td>
+                        <td class="entity-cell">Malakoff Humanis</td>
+                        <td class="description-cell">Groupe mutualiste français de protection sociale, maison-mère de Médicis depuis 2021</td>
+                    </tr>
+                    <tr class="cat-groupe-partenaires">
+                        <td class="category-cell">Partenaire</td>
+                        <td class="entity-cell">APPER</td>
+                        <td class="description-cell">Association pour la Promotion du Plan d'Épargne Retraite, organisme technique gérant les PER</td>
+                    </tr>
+                    <tr class="cat-groupe-partenaires">
+                        <td class="category-cell">Partenaire</td>
+                        <td class="entity-cell">Sienna Investment Managers</td>
+                        <td class="description-cell">Société de gestion d'actifs spécialisée dans l'investissement socialement responsable, partenaire du PER Multisupport</td>
+                    </tr>
+                    <tr class="cat-groupe-partenaires">
+                        <td class="category-cell">Partenaire</td>
+                        <td class="entity-cell">CITELIS</td>
+                        <td class="description-cell">Prestataire de services de paiement en ligne sécurisé utilisé par Médicis</td>
+                    </tr>
+                    
+                    <!-- Organismes professionnels -->
+                    <tr class="cat-organismes-professionnels">
+                        <td class="category-cell">Organisme professionnel</td>
+                        <td class="entity-cell">Confédération des Commerçants De France</td>
+                        <td class="description-cell">Organisation représentative défendant les intérêts du commerce indépendant, partenaire de Médicis</td>
+                    </tr>
+                    <tr class="cat-organismes-professionnels">
+                        <td class="category-cell">Organisme professionnel</td>
+                        <td class="entity-cell">CMA France</td>
+                        <td class="description-cell">Établissement public national fédérateur du réseau des Chambres de Métiers et de l'Artisanat</td>
+                    </tr>
+                    <tr class="cat-organismes-professionnels">
+                        <td class="category-cell">Organisme professionnel</td>
+                        <td class="entity-cell">Observatoire Amarok</td>
+                        <td class="description-cell">Association d'études sur la santé physique et mentale des travailleurs non-salariés, partenaire de Médicis</td>
+                    </tr>
+                    
+                    <!-- Géographie -->
+                    <tr class="cat-geographie">
+                        <td class="category-cell">Géographie</td>
+                        <td class="entity-cell">Paris</td>
+                        <td class="description-cell">Ville où se situe le siège social de Médicis (12-14 rue Médéric, 75017)</td>
+                    </tr>
+                    <tr class="cat-geographie">
+                        <td class="category-cell">Géographie</td>
+                        <td class="entity-cell">France</td>
+                        <td class="description-cell">Pays d'implantation de Médicis, territoire d'exercice de ses activités</td>
+                    </tr>
+                    <tr class="cat-geographie">
+                        <td class="category-cell">Géographie</td>
+                        <td class="entity-cell">Île-de-France</td>
+                        <td class="description-cell">Région administrative française où se situe le siège de Médicis</td>
+                    </tr>
+                    <tr class="cat-geographie">
+                        <td class="category-cell">Géographie</td>
+                        <td class="entity-cell">Europe</td>
+                        <td class="description-cell">Continent de référence pour les orientations stratégiques et la réglementation applicable à Médicis</td>
+                    </tr>
+                    
+                    <!-- Personnes -->
+                    <tr class="cat-personnes">
+                        <td class="category-cell">Personne</td>
+                        <td class="entity-cell">Christian Martin</td>
+                        <td class="description-cell">Président du Conseil d'Administration de Médicis depuis 2016, réélu en 2022</td>
+                    </tr>
+                    <tr class="cat-personnes">
+                        <td class="category-cell">Personne</td>
+                        <td class="entity-cell">Michel CLERC</td>
+                        <td class="description-cell">Directeur Général de Médicis et directeur de publication du site web</td>
+                    </tr>
+                    
+                    <!-- Législation -->
+                    <tr class="cat-legislation">
+                        <td class="category-cell">Législation</td>
+                        <td class="entity-cell">loi PACTE</td>
+                        <td class="description-cell">Plan d'Action pour la Croissance et la Transformation des Entreprises (2019), ayant créé le PER</td>
+                    </tr>
+                    <tr class="cat-legislation">
+                        <td class="category-cell">Législation</td>
+                        <td class="entity-cell">loi Madelin</td>
+                        <td class="description-cell">Loi de 1994 ayant créé les contrats de retraite complémentaire pour les travailleurs non-salariés</td>
+                    </tr>
+                    <tr class="cat-legislation">
+                        <td class="category-cell">Législation</td>
+                        <td class="entity-cell">RGPD</td>
+                        <td class="description-cell">Règlement Général sur la Protection des Données (2018), réglementant le traitement des données personnelles</td>
+                    </tr>
+                    
+                    <!-- Labels & Certifications -->
+                    <tr class="cat-labels">
+                        <td class="category-cell">Label</td>
+                        <td class="entity-cell">Service Client de l'Année</td>
+                        <td class="description-cell">Distinction obtenue par Médicis 3 fois consécutivement pour la qualité de son service client</td>
+                    </tr>
+                    <tr class="cat-labels">
+                        <td class="category-cell">Label</td>
+                        <td class="entity-cell">ISR</td>
+                        <td class="description-cell">Label Investissement Socialement Responsable, certifiant la démarche ESG des fonds du PER Multisupport</td>
+                    </tr>
+                    
+                    <!-- Indices financiers -->
+                    <tr class="cat-indices">
+                        <td class="category-cell">Indice financier</td>
+                        <td class="entity-cell">PASS</td>
+                        <td class="description-cell">Plafond Annuel de la Sécurité Sociale, référence pour le calcul des cotisations et déductions fiscales PER</td>
+                    </tr>
+                    <tr class="cat-indices">
+                        <td class="category-cell">Indice financier</td>
+                        <td class="entity-cell">TGF 05</td>
+                        <td class="description-cell">Table de mortalité féminine utilisée par Médicis pour le calcul des rentes viagères</td>
+                    </tr>
+                    
+                    <!-- Médias & Publications -->
+                    <tr class="cat-medias">
+                        <td class="category-cell">Média</td>
+                        <td class="entity-cell">Le Revenu</td>
+                        <td class="description-cell">Magazine spécialisé en épargne et placement, ayant décerné des trophées aux produits Médicis</td>
+                    </tr>
+                    <tr class="cat-medias">
+                        <td class="category-cell">Média</td>
+                        <td class="entity-cell">Challenges</td>
+                        <td class="description-cell">Magazine économique français ayant récompensé le PER Médicis Multisupport</td>
+                    </tr>
+                    <tr class="cat-medias">
+                        <td class="category-cell">Média</td>
+                        <td class="entity-cell">OpinionWay</td>
+                        <td class="description-cell">Institut de sondage ayant réalisé des études sur la transmission pour Médicis</td>
+                    </tr>
+                    
+                    <!-- Événements -->
+                    <tr class="cat-evenements">
+                        <td class="category-cell">Événement</td>
+                        <td class="entity-cell">Trophées du Revenu</td>
+                        <td class="description-cell">Prix annuel décerné par le magazine Le Revenu, remporté par le PER Médicis Multisupport</td>
+                    </tr>
+                    <tr class="cat-evenements">
+                        <td class="category-cell">Événement</td>
+                        <td class="entity-cell">Semaine du Goût</td>
+                        <td class="description-cell">Événement annuel français soutenu par Médicis dans le cadre de ses partenariats avec les métiers de bouche</td>
+                    </tr>
+                    <tr class="cat-evenements">
+                        <td class="category-cell">Événement</td>
+                        <td class="entity-cell">concours MAF</td>
+                        <td class="description-cell">Concours national Meilleur Apprenti de France, soutenu par Médicis avec remise de prix aux jeunes bouchers</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
     <!-- Section Classes d'équivalence -->
-    <div id="equivalence" class="section active">
+    <div id="equivalence" class="section">
         <div class="classes-container">
             <div class="equivalence-class class-1">
                 <div class="class-title">Classe 1 : Médicis</div>
@@ -250,57 +571,4 @@
                     <li>Espace Adhérents</li>
                     <li>Espaces Adhérents et Partenaires</li>
                 </ul>
-                <div class="element-count">2 éléments</div>
-            </div>
-        </div>
-        
-        <div class="stats">
-            <strong>Résumé :</strong> 9 classes d'équivalence • 17 éléments distincts
-        </div>
-    </div>
-    
-    <!-- Section Graphe -->
-    <div id="graph" class="section">
-        <div class="placeholder">
-            <h2>Graphe des relations</h2>
-            <p>Contenu à ajouter...</p>
-        </div>
-    </div>
-    
-    <!-- Section Tableau -->
-    <div id="table" class="section">
-        <div class="placeholder">
-            <h2>Tableau de données</h2>
-            <p>Contenu à ajouter...</p>
-        </div>
-    </div>
-    
-    <!-- Section Statistiques -->
-    <div id="stats" class="section">
-        <div class="placeholder">
-            <h2>Statistiques avancées</h2>
-            <p>Contenu à ajouter...</p>
-        </div>
-    </div>
-    
-    <script>
-        function showSection(sectionId) {
-            // Cacher toutes les sections
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Désactiver tous les onglets
-            document.querySelectorAll('.nav-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // Afficher la section sélectionnée
-            document.getElementById(sectionId).classList.add('active');
-            
-            // Activer l'onglet correspondant
-            event.target.classList.add('active');
-        }
-    </script>
-</body>
-</html>
+                <div class="element-
