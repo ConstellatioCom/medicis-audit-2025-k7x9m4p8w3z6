@@ -125,6 +125,29 @@
         .cat-indices { border-left: 4px solid #e91e63; }
         .cat-medias { border-left: 4px solid #00bcd4; }
         .cat-evenements { border-left: 4px solid #795548; }
+        
+        /* Séparation des catégories */
+        .category-separator {
+            height: 20px;
+            background: linear-gradient(90deg, #e9ecef 0%, transparent 100%);
+            margin: 0;
+            border: none;
+        }
+        
+        .category-header {
+            background: #f8f9fa !important;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #495057;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .category-header td {
+            padding: 15px !important;
+            border-top: 2px solid #dee2e6;
+            border-bottom: 2px solid #dee2e6;
+        }
     </style>
 </head>
 <body>
@@ -152,7 +175,10 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Médicis et ses produits/services -->
+                <!-- MÉDICIS ET SES PRODUITS/SERVICES -->
+                <tr class="category-header">
+                    <td colspan="3">🏢 MÉDICIS ET SES PRODUITS/SERVICES</td>
+                </tr>
                 <tr class="cat-medicis">
                     <td class="category-cell">Entité économique</td>
                     <td class="entity-cell">Médicis</td>
@@ -199,7 +225,10 @@
                     <td class="description-cell">Plateforme digitale sécurisée permettant aux adhérents Médicis de gérer leur contrat en ligne 24h/24</td>
                 </tr>
                 
-                <!-- Organismes publics -->
+                <!-- ORGANISMES PUBLICS -->
+                <tr class="category-header">
+                    <td colspan="3">🏛️ ORGANISMES PUBLICS</td>
+                </tr>
                 <tr class="cat-organismes-publics">
                     <td class="category-cell">Organisme public</td>
                     <td class="entity-cell">ACPR</td>
@@ -241,7 +270,10 @@
                     <td class="description-cell">Organisme de sécurité sociale gérant l'assurance maladie obligatoire</td>
                 </tr>
                 
-                <!-- Groupe & Partenaires -->
+                <!-- GROUPE & PARTENAIRES -->
+                <tr class="category-header">
+                    <td colspan="3">🤝 GROUPE & PARTENAIRES</td>
+                </tr>
                 <tr class="cat-groupe-partenaires">
                     <td class="category-cell">Groupe</td>
                     <td class="entity-cell">Malakoff Humanis</td>
@@ -263,7 +295,10 @@
                     <td class="description-cell">Prestataire de services de paiement en ligne sécurisé utilisé par Médicis</td>
                 </tr>
                 
-                <!-- Organismes professionnels (échantillon) -->
+                <!-- ORGANISMES PROFESSIONNELS -->
+                <tr class="category-header">
+                    <td colspan="3">👥 ORGANISMES PROFESSIONNELS</td>
+                </tr>
                 <tr class="cat-organismes-professionnels">
                     <td class="category-cell">Organisme professionnel</td>
                     <td class="entity-cell">Confédération des Commerçants De France</td>
@@ -280,7 +315,10 @@
                     <td class="description-cell">Association d'études sur la santé physique et mentale des travailleurs non-salariés, partenaire de Médicis</td>
                 </tr>
                 
-                <!-- Géographie -->
+                <!-- GÉOGRAPHIE -->
+                <tr class="category-header">
+                    <td colspan="3">🌍 GÉOGRAPHIE</td>
+                </tr>
                 <tr class="cat-geographie">
                     <td class="category-cell">Géographie</td>
                     <td class="entity-cell">Paris</td>
@@ -292,7 +330,10 @@
                     <td class="description-cell">Pays d'implantation de Médicis, territoire d'exercice de ses activités</td>
                 </tr>
                 
-                <!-- Personnes -->
+                <!-- PERSONNES -->
+                <tr class="category-header">
+                    <td colspan="3">👤 PERSONNES</td>
+                </tr>
                 <tr class="cat-personnes">
                     <td class="category-cell">Personne</td>
                     <td class="entity-cell">Christian Martin</td>
@@ -304,7 +345,10 @@
                     <td class="description-cell">Directeur Général de Médicis et directeur de publication du site web</td>
                 </tr>
                 
-                <!-- Législation -->
+                <!-- LÉGISLATION -->
+                <tr class="category-header">
+                    <td colspan="3">📜 LÉGISLATION</td>
+                </tr>
                 <tr class="cat-legislation">
                     <td class="category-cell">Législation</td>
                     <td class="entity-cell">loi PACTE</td>
@@ -316,7 +360,10 @@
                     <td class="description-cell">Loi de 1994 ayant créé les contrats de retraite complémentaire pour les travailleurs non-salariés</td>
                 </tr>
                 
-                <!-- Labels -->
+                <!-- LABELS & CERTIFICATIONS -->
+                <tr class="category-header">
+                    <td colspan="3">🏆 LABELS & CERTIFICATIONS</td>
+                </tr>
                 <tr class="cat-labels">
                     <td class="category-cell">Label</td>
                     <td class="entity-cell">Service Client de l'Année</td>
@@ -328,21 +375,30 @@
                     <td class="description-cell">Label Investissement Socialement Responsable, certifiant la démarche ESG des fonds du PER Multisupport</td>
                 </tr>
                 
-                <!-- Indices financiers -->
+                <!-- INDICES FINANCIERS -->
+                <tr class="category-header">
+                    <td colspan="3">📊 INDICES FINANCIERS</td>
+                </tr>
                 <tr class="cat-indices">
                     <td class="category-cell">Indice financier</td>
                     <td class="entity-cell">PASS</td>
                     <td class="description-cell">Plafond Annuel de la Sécurité Sociale, référence pour le calcul des cotisations et déductions fiscales PER</td>
                 </tr>
                 
-                <!-- Médias -->
+                <!-- MÉDIAS & PUBLICATIONS -->
+                <tr class="category-header">
+                    <td colspan="3">📰 MÉDIAS & PUBLICATIONS</td>
+                </tr>
                 <tr class="cat-medias">
                     <td class="category-cell">Média</td>
                     <td class="entity-cell">Le Revenu</td>
                     <td class="description-cell">Magazine spécialisé en épargne et placement, ayant décerné des trophées aux produits Médicis</td>
                 </tr>
                 
-                <!-- Événements -->
+                <!-- ÉVÉNEMENTS -->
+                <tr class="category-header">
+                    <td colspan="3">🎪 ÉVÉNEMENTS</td>
+                </tr>
                 <tr class="cat-evenements">
                     <td class="category-cell">Événement</td>
                     <td class="entity-cell">Trophées du Revenu</td>
